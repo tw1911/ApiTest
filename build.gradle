@@ -1,6 +1,4 @@
 plugins {
-    id 'org.springframework.boot' version '2.1.8.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
 }
 
@@ -14,9 +12,12 @@ repositories {
 }
 
 dependencies {
+    testImplementation 'org.testng:testng:7.0.0'
     testImplementation 'io.rest-assured:rest-assured:4.1.1'
-    implementation 'io.rest-assured:json-path:4.0.0'
-    implementation 'io.rest-assured:xml-path:4.0.0'
-    implementation 'org.springframework.boot:spring-boot-starter'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useTestNG() {
+   //     suites 'src/test/resources/all_tests_suite.xml'
+    }
 }

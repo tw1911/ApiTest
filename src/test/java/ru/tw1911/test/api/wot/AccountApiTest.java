@@ -1,19 +1,10 @@
 package ru.tw1911.test.api.wot;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.get;
-import static org.hamcrest.Matchers.*;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class AccountApiTest {
-    @Value("${test.base.url}")
-    private String baseUrl;
+public class AccountApiTest extends BaseTest{
 
     @Test
     public void printBaseUrl(){
