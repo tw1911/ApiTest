@@ -13,6 +13,16 @@ public class AccountApiTest extends BaseTest{
 
     @Test
     public void searchAccountTest(){
-        get(baseUrl+ "account/list/?application_id=c52fbe5e23e9ae2bb7b57c5f3007ae0b&search=tw1911").then().statusCode(200);
+        get(baseUrl+ "account/list/?application_id="+application_id+"+&search=tw1911").then().statusCode(200);
+    }
+
+    @Test
+    public void strongSearchTest(){
+
+    }
+
+    @Test
+    public void searchOutputLimitTest(){
+        
     }
 }
