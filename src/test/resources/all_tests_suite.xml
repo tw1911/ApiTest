@@ -1,5 +1,5 @@
 <test name="All_tests" preserve-order="false">
     <classes>
-        <class name="ru.tw1911.test.api.wot.AccountApiTest"/>
+        <class name="ru.tw1911.test.api.wot.AccountApiTests"/>
     </classes>
 </test>

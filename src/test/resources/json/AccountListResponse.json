@@ -1,0 +1,20 @@
+{
+  "status": "ok",
+  "meta": {
+    "count": 3
+  },
+  "data": [
+    {
+      "nickname": "Wez",
+      "account_id": 61191258
+    },
+    {
+      "nickname": "wez0",
+      "account_id": 104422529
+    },
+    {
+      "nickname": "WEZ069",
+      "account_id": 61050361
+    }
+  ]
+}
