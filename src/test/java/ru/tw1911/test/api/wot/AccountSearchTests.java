@@ -12,7 +12,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
-public class AccountApiTests extends BaseTest{
+public class AccountSearchTests extends BaseTest{
 
     @BeforeClass
     public void setTestClass(){
@@ -66,5 +66,16 @@ public class AccountApiTests extends BaseTest{
                 .get()
                 .jsonPath().getList("data",Account.class);
         assertThat(accounts.size(),is(1));
+    }
+
+    @Test
+    public void emptySearchParameterTest(){
+        given()
+                .queryParam("search","")
+                .get()
+                .then().assertThat().statusCode(200)
+                .body("status", equalTo("error"))
+                .body("error.message",equalTo("SEARCH_NOT_SPECIFIED"))
+                .body("error.code", equalTo(402));
     }
 }
